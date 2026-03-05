@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Two Interface Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f6f8;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        button {
+            padding: 12px 25px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: #007bff;
+            color: white;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Interface 1 — Home</h1>
+    <p>Choose an option below:</p>
+
+    <button onclick="showMessage()">Click Me</button>
+    <button onclick="changeColor()">Change Background</button>
+    <button onclick="goToPage2()">Go to Interface 2</button>
+
+    <div id="message"></div>
+</div>
+
+<script>
+    function showMessage() {
+        document.getElementById("message").innerText = "You clicked the button!";
+    }
+
+    function changeColor() {
+        document.body.style.background =
+            document.body.style.background === "lightyellow"
+            ? "#f4f6f8"
+            : "lightyellow";
+    }
+
+    function goToPage2() {
+        window.location.href = "page2.html";
+    }
+</script>
+
+</body>
+</html>
